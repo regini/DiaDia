@@ -10,13 +10,12 @@ import it.uniroma3.diadia.giocatore.Giocatore;
  * @see Stanza
  * @see Giocatore
  * @see Labirinto
- * @version 2.0
  */
 
 public class Partita {
 	private Stanza stanzaCorrente;
 	private boolean finita;
-	private Giocatore giocatore;	
+	private Giocatore giocatore;
 
 	public Partita(Labirinto labirinto){
 		this.giocatore = new Giocatore();
@@ -33,7 +32,7 @@ public class Partita {
 	public void setStanzaCorrente(Stanza stanzaCorrente) {
 		this.stanzaCorrente = stanzaCorrente;
 	}
-	
+
 	/**
 	 * Restituisce la stanza corrente
 	 * @return string stanza corrente
@@ -41,7 +40,7 @@ public class Partita {
 	public Stanza getStanzaCorrente() {
 		return this.stanzaCorrente;
 	}
-	
+
 	/**
 	 * Restituisce il giocatore della partita
 	 * @return il giocatore della partita
@@ -65,13 +64,13 @@ public class Partita {
 	public boolean isFinita(Labirinto labirinto) {
 		return finita || vinta(labirinto) || !this.giocatoreIsVivo();
 	}
-	
+
 	/**
 	 * Restituisce vero se e solo se il giocatore non ha esaurito i CFU
 	 * @return false se il giocatore ha esaurito i CFU
 	 */
 	public boolean giocatoreIsVivo() {
-		return !(this.giocatore.getCfu()==0);	
+		return !(this.giocatore.getCfu()==0);
 	}
 
 	/**
